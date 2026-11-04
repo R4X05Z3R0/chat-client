@@ -1,6 +1,7 @@
 package com.example.chatcilent.controller;
 
 import com.example.chatcilent.dto.DinnerRequest;
+import com.example.chatcilent.dto.DinnerResponse;
 import com.example.chatcilent.service.DinnerService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +21,7 @@ public class DinnerController {
     }
 
     @PostMapping("/api/dinner")
-    public String suggest(@RequestBody DinnerRequest request){
+    public DinnerResponse suggest(@RequestBody DinnerRequest request){
         return service.suggest(request);
     }
 }
